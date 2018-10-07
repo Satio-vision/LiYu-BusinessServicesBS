@@ -13,7 +13,7 @@
     "array-includes": "^3.0.3",
     "axios": "^0.18.0",
     "define-properties": "^1.1.3",
-    "mint-ui": "^2.2.13",
+    "element-ui": "^2.4.8",
     "object-keys": "^1.0.12",
     "vue": "^2.5.2",
     "vue-lazyload": "^1.2.6",
