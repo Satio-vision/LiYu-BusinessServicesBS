@@ -7,7 +7,11 @@
             <HomeNav @listenToNavGo= "getNavGo"></HomeNav>
         </el-aside>
         <el-container>
-            <el-header height="70px" id="header">Header</el-header>
+            <el-header height="70px" id="header">
+                <div id="name">
+                    <span id="welcome">欢迎</span>
+                </div>
+            </el-header>
             <el-main>
                 <router-view></router-view>
             </el-main>
@@ -36,14 +40,25 @@ export default {
             case '渠道监控' :
                 this.$router.push('/activityList_ChannelMonitoring');
                 break;
+            case '活动发布' :
+                this.$router.push('/activityList_Publish');
+                break;
+            case '活动渠道统计' :
+                this.$router.push('/activityList_Stats');
+                break;
+            case '库存管理' :
+                this.$router.push('/activityList_Stock');
+                break;
+            case '编辑公众号' :
+                this.$router.push('/mp_Edit');
+                break;
+            case ' 经理人管理' :
+                this.$router.push('/handler');
+                break;
+            case ' 新增经理人' :
+                this.$router.push('/add_handler');
+                break;
         }
-        // if(data === '活动订单管理'){
-        //     console.log('aa');
-        //     this.$router.push('/activityOrder');
-        // }
-        // else if(data == '渠道监控'){
-        //     this.$router.push('/activityList_ChannelMonitoring');
-        // }
       }
   }
 }
@@ -82,8 +97,28 @@ export default {
             background: #F3F5F7;
         }
     }
-    #header{
-        box-shadow: 0 1px 4px 0 rgba(0,21,41,0.12);
+    .el-container{
+        #header{
+            box-shadow: 0 1px 4px 0 rgba(0,21,41,0.12);
+            position: relative;
+            #name{
+                position: absolute;
+                right:20px;
+                top:17px;
+                height: 36px;
+                #welcome{
+                    font-family: PingFang-SC-Medium;
+                    font-size: 14px;
+                    color: #0B7BFF;
+                    letter-spacing: 0;
+                    line-height: 36px;
+                }
+            }
+        }
+        .el-main{
+            padding:24px 30px;
+            background: #f4f6f9;
+        }
     }
 }
 </style>

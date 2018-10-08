@@ -11,7 +11,7 @@
 </script>
 
 <style scoped>
-.activityOrder{
+.activityList-ChannelMonitoring{
   width: 100%;
   height: 100%;
 }
